@@ -1,0 +1,72 @@
+body {
+	background-image: url("bg.jpg");
+	background-color: black;
+}
+
+.title {
+	font-size: 32pt;
+	text-align: center;
+	font-weight: bold;
+	color: #eee;
+	padding-top: 30px;
+	text-shadow: 0px 0px 5px #000;
+}
+
+.cat-tab {
+	width:330;
+
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    margin: auto;
+}
+.hvr-fade {
+	display: inline-block;
+	vertical-align: middle;
+	-webkit-transform: translateZ(0);
+	transform: translateZ(0);
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	-moz-osx-font-smoothing: grayscale;
+	overflow: hidden;
+	-webkit-transition-duration: 0.3s;
+	transition-duration: 0.3s;
+	-webkit-transition-property: color, background-color;
+	transition-property: color, background-color;
+}
+
+.hvr-fade:hover, .hvr-fade:focus, .hvr-fade:active {
+	background-color: #2098d1;
+	color: white;
+}
+
+[class^="hvr-"] {
+    /* display: inline-block; */
+    /* vertical-align: middle; */
+    margin: .4em;
+    padding: 1em;
+    cursor: pointer;
+    background: #333;
+    text-decoration: none;
+    color: #eee;
+	width: 250;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+p, [class^="hvr-"] {
+    font-family: 'Roboto', sans-serif;
+}
+
+.circle { 
+	width:80px;
+	height:80px;
+	box-shadow: 0px 0px 10px 0px rgba(0,0,0,1) inset;
+	-moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,1) inset;
+	-webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,1) inset;
+	-o-box-shadow: 0px 0px 10px 0px rgba(0,0,0,1) inset;
+	border-radius:80px;
+}
