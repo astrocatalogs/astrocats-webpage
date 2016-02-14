@@ -3,18 +3,100 @@ body {
 	background-color: black;
 }
 
+.cat-tab {
+	table-layout:fixed;
+}
+
 .title {
-	font-size: 32pt;
+    font-family: 'Roboto', sans-serif;
+	font-size: 40pt;
 	text-align: center;
 	font-weight: bold;
 	color: #eee;
 	padding-top: 30px;
-	text-shadow: 0px 0px 5px #000;
+	text-shadow: 0px 0px 15px #000;
 }
 
-.cat-tab {
-	width:330;
+.subtitle {
+    font-family: 'Roboto', sans-serif;
+	font-size: 24pt;
+	text-align: center;
+	color: #eee;
+	padding-top: 10px;
+	padding-bottom: 30px;
+	text-shadow: 0px 0px 15px #000;
+}
 
+.cat1 {
+	background-image: url("tycho.png");
+	background-size: 80px;
+	transition: background-image 1s ease-in-out;
+}
+
+.cat2 {
+	background-image: url("tde.png");
+	background-size: 80px;
+	transition: background-image 1s ease-in-out;
+}
+
+.cat3 {
+	background-image: url("gc.png");
+	background-size: 80px;
+	transition: background-image 1s ease-in-out;
+}
+
+.cat4 {
+	background-image: url("holes.png");
+	background-size: 80px;
+	transition: background-image 1s ease-in-out;
+}
+
+.cat5 {
+	background-image: url("exoplanet.png");
+	background-size: 80px;
+	transition: background-image 1s ease-in-out;
+}
+
+.cat1:hover {
+	background-image: url("cat1.jpg");
+	background-size: 80px;
+}
+
+.cat2:hover {
+	background-image: url("cat2.jpg");
+	background-size: 80px;
+}
+
+.cat3:hover {
+	background-image: url("cat3.jpg");
+	background-size: 80px;
+}
+
+.cat4:hover {
+	background-image: url("cat4.jpg");
+	background-size: 80px;
+}
+
+.cat5:hover {
+	background-image: url("cat5.jpg");
+	background-size: 80px;
+}
+
+.note {
+    font-family: 'Roboto', sans-serif;
+	font-size: 12pt;
+	text-align: center;
+	color: #eee;
+	padding-top: 20px;
+	font-style: oblique;
+	text-shadow: 0px 0px 15px #000;
+}
+
+.main {
+	width:400;
+
+	background-color:rgba(0,0,0,0.75);
+	padding:15px;
     position: absolute;
     top:0;
     bottom: 0;
@@ -22,6 +104,7 @@ body {
     right: 0;
 
     margin: auto;
+	padding-left: -70px;
 }
 .hvr-fade {
 	display: inline-block;
@@ -62,11 +145,17 @@ p, [class^="hvr-"] {
 }
 
 .circle { 
+	background-color:black;
+	display:block;
 	width:80px;
 	height:80px;
-	box-shadow: 0px 0px 10px 0px rgba(0,0,0,1) inset;
-	-moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,1) inset;
-	-webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,1) inset;
-	-o-box-shadow: 0px 0px 10px 0px rgba(0,0,0,1) inset;
+	box-shadow: 0px 0px 10px 5px rgba(0,0,0,1) inset;
+	-moz-box-shadow: 0px 0px 10px 5px rgba(0,0,0,1) inset;
+	-webkit-box-shadow: 0px 0px 10px 5px rgba(0,0,0,1) inset;
+	-o-box-shadow: 0px 0px 10px 5px rgba(0,0,0,1) inset;
 	border-radius:80px;
+}
+
+.rightdiv {
+	width: 70px;
 }
