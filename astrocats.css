@@ -57,6 +57,12 @@ body {
 	transition: background-image 1s ease-in-out;
 }
 
+.cat6 {
+	background-image: url("nova.jpg");
+	background-size: 80px;
+	transition: background-image 1s ease-in-out;
+}
+
 .cat1:hover {
 	background-image: url("cat1.jpg");
 	background-size: 80px;
@@ -79,6 +85,11 @@ body {
 
 .cat5:hover {
 	background-image: url("cat5.jpg");
+	background-size: 80px;
+}
+
+.cat6:hover {
+	background-image: url("cat6.jpg");
 	background-size: 80px;
 }
 

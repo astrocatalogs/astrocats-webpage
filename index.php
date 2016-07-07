@@ -29,6 +29,7 @@
 <tbody>
 <tr><td><a target="_blank" href="https://galcenter.space" class="cat3 circle"></td><td><a target="_blank" href="https://galcenter.space" class="hvr-fade">Open Galactic Center Catalog</a></td><td class="rightdiv"></td></tr>
 <tr><td><a target="_blank" href="https://holes.space" class="cat4 circle"></td><td><a target="_blank" href="https://holes.space" class="hvr-fade">Open Black Hole Catalog</a></td><td class="rightdiv"></td></tr>
+<tr><td><a target="_blank" href="https://opennova.space/" class="cat6 circle"></td><td><a target="_blank" href="https://opennova.space/" class="hvr-fade">Open Nova Catalogue</a></td><td class="rightdiv"></td></tr>
 </tbody>
 </table>
 </div>
