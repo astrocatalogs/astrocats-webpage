@@ -63,6 +63,12 @@ body {
 	transition: background-image 1s ease-in-out;
 }
 
+.cat7 {
+	background-image: url("kilonova.png");
+	background-size: 80px;
+	transition: background-image 1s ease-in-out;
+}
+
 .cat1:hover {
 	background-image: url("cat1.jpg");
 	background-size: 80px;
@@ -90,6 +96,11 @@ body {
 
 .cat6:hover {
 	background-image: url("cat6.jpg");
+	background-size: 80px;
+}
+
+.cat7:hover {
+	background-image: url("cat7.jpg");
 	background-size: 80px;
 }
 
@@ -139,20 +150,34 @@ body {
 }
 
 [class^="hvr-"] {
-    /* display: inline-block; */
-    /* vertical-align: middle; */
-    margin: .4em;
-    padding: 1em;
+    display: inline-block;
+    vertical-align: middle;
+	margin: 0.4em;
+	padding: 1em;
+	padding-bottom: 0;
     cursor: pointer;
     background: #333;
     text-decoration: none;
     color: #eee;
-	width: 250;
     -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
 p, [class^="hvr-"] {
     font-family: 'Roboto', sans-serif;
+}
+
+.titles {
+	width: 200;
+	height: 34;
+}
+
+.gits {
+	margin-left: 0;
+	width: 40;
+	height: 34;
+	padding: 0.5em;
+	padding-top: 0.3em;
+	padding-bottom: 0.7em;
 }
 
 .circle { 
@@ -167,6 +192,14 @@ p, [class^="hvr-"] {
 	border-radius:80px;
 }
 
+.middiv {
+	width: 50px;
+}
+
 .rightdiv {
-	width: 70px;
+	width: 60px;
+}
+
+.gh {
+	width: 40px;
 }
