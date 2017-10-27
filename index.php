@@ -21,6 +21,7 @@
 <tbody>
 <tr><td><a target="_blank" href="https://sne.space" class="cat1 circle"></a></td><td><a target="_blank" href="https://sne.space" class="hvr-fade titles">Open Supernova Catalog</a></td><td class="middiv"></td><td class="rightdiv"><a target="_blank" href="https://github.com/astrocatalogs/supernovae" class="hvr-fade gits"><img class="gh" src="github.png"></a></td></tr>
 <tr><td><a target="_blank" href="https://tde.space" class="cat2 circle"></td><td><a target="_blank" href="https://tde.space" class="hvr-fade titles">Open TDE Catalog</a></td><td class="middiv"></td><td class="rightdiv"><a target="_blank" href="https://github.com/astrocatalogs/tidaldisruptions" class="hvr-fade gits"><img class="gh" src="github.png"></a></td></tr>
+<tr><td><a target="_blank" href="https://kilonova.space/" class="cat7 circle"></td><td><a target="_blank" href="https://kilonova.space/" class="hvr-fade titles">Open Kilonova Catalog</a></td><td class="middiv"></td><td class="rightdiv"><a target="_blank" href="https://github.com/astrocatalogs/kilonovae" class="hvr-fade gits"><img class="gh" src="github.png"></a></td </tr>
 <tr><td><a target="_blank" href="http://www.openexoplanetcatalogue.com/" class="cat5 circle"></td><td><a target="_blank" href="http://www.openexoplanetcatalogue.com/" class="hvr-fade titles">Open Exoplanet Catalogue</a></td><td class="middiv"></td><td class="rightdiv"><a target="_blank" href="https://github.com/OpenExoplanetCatalogue" class="hvr-fade gits"><img class="gh" src="github.png"></a></td></tr>
 </tbody>
 </table>
@@ -30,9 +31,11 @@
 <!-- <tr><td><a target="_blank" href="https://galcenter.space" class="cat3 circle"></td><td><a target="_blank" href="https://galcenter.space" class="hvr-fade titles">Open Galactic Center Catalog</a></td><td class="middiv"></td></tr>-->
 <!-- <tr><td><a target="_blank" href="https://holes.space" class="cat4 circle"></td><td><a target="_blank" href="https://holes.space" class="hvr-fade titles">Open Black Hole Catalog</a></td><td class="middiv"></td></tr>-->
 <tr><td><a target="_blank" href="https://opennova.space/" class="cat6 circle"></td><td><a target="_blank" href="https://opennova.space/" class="hvr-fade titles">Open Nova Catalog</a></td><td class="middiv"></td><td class="rightdiv"><a target="_blank" href="https://github.com/astrocatalogs/novae" class="hvr-fade gits"><img class="gh" src="github.png"></a></td </tr>
-<tr><td><a target="_blank" href="https://kilonova.space/" class="cat7 circle"></td><td><a target="_blank" href="https://kilonova.space/" class="hvr-fade titles">Open Kilonova Catalog</a></td><td class="middiv"></td><td class="rightdiv"><a target="_blank" href="https://github.com/astrocatalogs/kilonovae" class="hvr-fade gits"><img class="gh" src="github.png"></a></td </tr>
 </tbody>
 </table>
+<div class="links">
+<a href="https://github.com/astrocatalogs/astrocats">About</a> | <a href="https://github.com/astrocatalogs/OACAPI">API</a>
+</div>
 </div>
 </body>
 </html>

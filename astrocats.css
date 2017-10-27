@@ -27,6 +27,28 @@ body {
 	text-shadow: 0px 0px 15px #000;
 }
 
+.links {
+    font-family: 'Roboto', sans-serif;
+	font-size: 18pt;
+	text-align: center;
+	color: #eee;
+	padding-top: 10px;
+	padding-bottom: 30px;
+	text-shadow: 0px 0px 15px #000;
+}
+
+.links a:link {
+	color: lightgreen;
+}
+
+.links a:visited {
+	color: green;
+}
+
+.links a:hover {
+	color: limegreen;
+}
+
 .cat1 {
 	background-image: url("tycho.png");
 	background-size: 80px;
