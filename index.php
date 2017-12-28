@@ -34,7 +34,7 @@
 </tbody>
 </table>
 <div class="links">
-<a href="https://github.com/astrocatalogs/astrocats">About</a> | <a href="https://github.com/astrocatalogs/OACAPI">API</a>
+<a href="https://github.com/astrocatalogs/astrocats">About</a> | <a href="https://github.com/astrocatalogs/OACAPI">API</a> | <a href="https://slack.astrocats.space/">Slack</a>
 </div>
 </div>
 </body>
