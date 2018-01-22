@@ -8,7 +8,8 @@ function MakeReadable($num) {
 header('Content-Type: application/json');
 $patt="/var/log/oacapi.log*";
 
-$days = 7;
+$days = 0.8;
+$ips = array();
 
 $linecount = 0;
 foreach (glob($patt) as $file) {
@@ -24,6 +25,12 @@ foreach (glob($patt) as $file) {
 			$line = fgets($handle);
 			preg_match('/([0-9]{4}-[0-9]{2}-[0-9]{2} [0-9]{2}:[0-9]{2}:[0-9]{2})/', $line, $match);
 			preg_match('/(Query successful)/', $line, $qmatch);
+			preg_match('/(Query from )(.+): (.+) --/', $line, $imatch);
+			if (array_key_exists($imatch[2], $ips)) {
+				$ips[$imatch[2]]++;
+			} else {
+				$ips[$imatch[2]] = 0;
+			}
 			if (count($qmatch) > 0) {
 				$time = strtotime($match[0]);
 				if ((time() - $time) <= $days*86400) {
@@ -36,6 +43,6 @@ foreach (glob($patt) as $file) {
 	}
 }
 
-$arr = array('count' => MakeReadable($linecount));
+$arr = array('count' => MakeReadable($linecount), 'unique' => MakeReadable(count($ips)));
 echo json_encode($arr);
 ?>
