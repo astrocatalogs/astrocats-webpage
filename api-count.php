@@ -45,7 +45,7 @@ foreach (glob($patt) as $file) {
 			}
 			preg_match('/(Query unsuccessful)/', $line, $umatch);
 			if (count($umatch) > 0) {
-				if ($lc <= $lastlc + 3) {
+				if ($lc <= $lastelc + 3) {
 					if (array_key_exists($lastevent, $events)) {
 						if ($events[$lastevent] == 1) {
 							unset($events[$lastevent]);
@@ -54,16 +54,29 @@ foreach (glob($patt) as $file) {
 						}
 					}
 				}
+				if ($lc <= $lastilc + 3) {
+					if (array_key_exists($lastip, $ips)) {
+						if ($ips[$lastip] == 1) {
+							unset($ips[$lastip]);
+						} else {
+							$ips[$lastip]--;
+						}
+					}
+				}
 				continue;
 			}
 			preg_match('/(Query from )(.+): (.+) -- (.+)/', $line, $imatch);
 			if (count($imatch) == 0) continue;
 
-			if (array_key_exists($imatch[2], $ips)) {
-				$ips[$imatch[2]]++;
+			$ip = $imatch[2];
+			if (array_key_exists($ip, $ips)) {
+				$ips[$ip]++;
 			} else {
-				$ips[$imatch[2]] = 1;
+				$ips[$ip] = 1;
 			}
+			$lastilc = $lc;
+			$lastip = $ip;
+
 			$event = explode('/', $imatch[4])[0];
 			if (!in_array($event, array('None', 'all', 'catalog'))) {
 				if (array_key_exists($event, $events)) {
@@ -71,7 +84,7 @@ foreach (glob($patt) as $file) {
 				} else {
 					$events[$event] = 1;
 				}
-				$lastlc = $lc;
+				$lastelc = $lc;
 				$lastevent = $event;
 			}
 			$lc++;
