@@ -65,7 +65,7 @@ foreach (glob($patt) as $file) {
 				}
 				continue;
 			}
-			preg_match('/(Query from )(.+): (.+) -- (.+)/', $line, $imatch);
+			preg_match('/(Query from )(.+): (.+) -- (.+) -- (.+)/', $line, $imatch);
 			if (count($imatch) == 0) continue;
 
 			$ip = $imatch[2];
