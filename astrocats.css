@@ -68,7 +68,7 @@ body {
 }
 
 .cat4 {
-	background-image: url("holes.png");
+	background-image: url("hvs.jpg");
 	background-size: 80px;
 	transition: background-image 1s ease-in-out;
 }
