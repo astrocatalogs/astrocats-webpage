@@ -78,7 +78,7 @@ foreach (glob($patt) as $file) {
 			$lastip = $ip;
 
 			$event = explode('/', $imatch[4])[0];
-			if (!in_array($event, array('None', 'all', 'catalog'))) {
+			if (!in_array($event, array('None', 'all', 'catalog', 'atel', 'reload_atels'))) {
 				if (array_key_exists($event, $events)) {
 					$events[$event]++;
 				} else {
