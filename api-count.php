@@ -9,7 +9,8 @@ header('Content-Type: application/json');
 
 $cache_path = '/var/www/html/astrocats/api-count-cache/query';
 
-if (file_exists($cache_path) && time() - filemtime($cache_path) < 3600) {
+$cache_time = 3600;
+if (file_exists($cache_path) && time() - filemtime($cache_path) < $cache_time) {
 	echo file_get_contents($cache_path);
 	return;
 }
@@ -46,11 +47,13 @@ foreach (glob($patt) as $file) {
 			preg_match('/(Query unsuccessful)/', $line, $umatch);
 			if (count($umatch) > 0) {
 				if ($lc <= $lastelc + 3) {
-					if (array_key_exists($lastevent, $events)) {
-						if ($events[$lastevent] == 1) {
-							unset($events[$lastevent]);
-						} else {
-							$events[$lastevent]--;
+					foreach ($lastevents as $lev) {
+						if (array_key_exists($lev, $events)) {
+							if ($events[$lev] == 1) {
+								unset($events[$lev]);
+							} else {
+								$events[$lev]--;
+							}
 						}
 					}
 				}
@@ -78,14 +81,18 @@ foreach (glob($patt) as $file) {
 			$lastip = $ip;
 
 			$event = explode('/', $imatch[4])[0];
-			if (!in_array($event, array('None', 'all', 'catalog', 'atel', 'reload_atels'))) {
-				if (array_key_exists($event, $events)) {
-					$events[$event]++;
-				} else {
-					$events[$event] = 1;
+			$pevents = array_map('trim', explode('+', $event));
+			$lastevents = array();
+			foreach ($pevents as $pev) {
+				if (!in_array($pev, array('None', 'all', 'catalog', 'atel', 'reload_atels', 'reload_cats'))) {
+					if (array_key_exists($pev, $events)) {
+						$events[$pev]++;
+					} else {
+						$events[$pev] = 1;
+					}
+					$lastelc = $lc;
+					array_push($lastevents, $pev);
 				}
-				$lastelc = $lc;
-				$lastevent = $event;
 			}
 			$lc++;
 		}
