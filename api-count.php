@@ -82,6 +82,15 @@ foreach (glob($patt) as $file) {
 
 			$event = explode('/', $imatch[4])[0];
 			$pevents = array_map('trim', explode('+', $event));
+			$npevents = array();
+			foreach ($pevents as $pev) {
+				if (is_numeric($pev)) {
+					$npevents[count($npevents) - 1] .= '+' . $pev;
+				} else {
+					array_push($npevents, $pev);
+				}
+			}
+			$pevents = $npevents;
 			$lastevents = array();
 			foreach ($pevents as $pev) {
 				if (!in_array($pev, array('None', 'all', 'catalog', 'atel', 'reload_atels', 'reload_cats'))) {
