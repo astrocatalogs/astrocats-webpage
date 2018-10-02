@@ -7,10 +7,11 @@ function MakeReadable($num) {
 
 header('Content-Type: application/json');
 
-$cache_path = '/var/www/html/astrocats/api-count-cache/query';
-
+$days = isset($_GET['month']) ? 30 : 7;
 $cache_time = 3600;
-$cache_time = 0;
+
+$cache_path = '/var/www/html/astrocats/api-count-cache/query-' . $days;
+
 if (file_exists($cache_path) && time() - filemtime($cache_path) < $cache_time) {
 	echo file_get_contents($cache_path);
 	return;
@@ -18,7 +19,6 @@ if (file_exists($cache_path) && time() - filemtime($cache_path) < $cache_time) {
 
 $patt="/var/log/oacapi.log*";
 
-$days = 7;
 $day_secs = $days * 86400;
 $ips = array();
 $events = array();
