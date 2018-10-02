@@ -10,6 +10,7 @@ header('Content-Type: application/json');
 $cache_path = '/var/www/html/astrocats/api-count-cache/query';
 
 $cache_time = 3600;
+$cache_time = 0;
 if (file_exists($cache_path) && time() - filemtime($cache_path) < $cache_time) {
 	echo file_get_contents($cache_path);
 	return;
@@ -87,6 +88,8 @@ foreach (glob($patt) as $file) {
 				if (is_numeric($pev)) {
 					$npevents[count($npevents) - 1] .= '+' . $pev;
 				} else {
+					if (strpos($pev, 'sn') === 0) $pev = substr_replace($pev, 'SN', 0, 2);
+					if (strpos($pev, 'at') === 0) $pev = substr_replace($pev, 'AT', 0, 2);
 					array_push($npevents, $pev);
 				}
 			}
